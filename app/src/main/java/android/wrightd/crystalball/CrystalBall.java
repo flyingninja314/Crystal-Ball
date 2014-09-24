@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.TextureView;
+import android.widget.TextView;
 
 
 public class CrystalBall extends Activity {
@@ -17,7 +18,7 @@ public class CrystalBall extends Activity {
         setContentView(R.layout.activity_crystal_ball);
 
         answerText = (TextView) findViewById(R.id.answerText);
-        aswerText.setText("Question not understood. For $5.00 more, I can give you a better answer.");
+        answerText.setText(Predictions.get().getPrediction());
     }
 
 }
