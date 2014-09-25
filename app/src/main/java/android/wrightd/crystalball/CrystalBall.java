@@ -1,16 +1,34 @@
 package android.wrightd.crystalball;
 
 import android.app.Activity;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.TextureView;
 import android.widget.TextView;
 
 
 public class CrystalBall extends Activity {
 
     private TextView answerText;
+
+    private SensorManager sensorManager;
+    private float acceleration;
+    private float currentAcceleration;
+    private float previousAcceleration;
+
+    private final SensorEventListener sensorListener = new SensorEventListener() {
+        @Override
+        public void onSensorChanged(SensorEvent event) {
+
+        }
+
+        @Override
+        public void onAccuracyChanged(Sensor sensor, int accuracy) {
+
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
