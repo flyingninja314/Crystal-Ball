@@ -30,7 +30,9 @@ public class CrystalBall extends Activity {
 
         }
     };
-
+/*
+    nothing coded in milestone 17 video
+*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
