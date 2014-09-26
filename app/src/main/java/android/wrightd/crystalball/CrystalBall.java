@@ -23,7 +23,7 @@ public class CrystalBall extends Activity {
     private TextView answerText;
 
     /*
-    look at all these variables 
+    look at all these variables
      */
 
     private SensorManager sensorManager;
