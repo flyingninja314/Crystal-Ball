@@ -53,6 +53,12 @@ public class CrystalBall extends Activity {
                 toast.show();
                 MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.crystal_ball);
                 mediaPlayer.start();
+
+                /*
+                    yaay getting the predictions
+                 */
+                answerText = (TextView) findViewById(R.id.answerText);
+                answerText.setText(Predictions.get().getPrediction());
             }
         }
 
@@ -78,12 +84,6 @@ whoo hoo setting up gravity situations and such so we can know if the device has
         acceleration = 0.0f;
         currentAcceleration = SensorManager.GRAVITY_EARTH;
         previousAcceleration = SensorManager.GRAVITY_EARTH;
-
-                /*
-                    yaay getting the predictions
-                 */
-        answerText = (TextView) findViewById(R.id.answerText);
-        answerText.setText(Predictions.get().getPrediction());
     }
 
     @Override
