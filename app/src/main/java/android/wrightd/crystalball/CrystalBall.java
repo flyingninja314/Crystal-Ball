@@ -4,7 +4,7 @@ wow look at all these things to import
 also these commented "w"'s look weird
 how do you spell "w"?
 double-yoo?
-anyways, these imports show the android.whatevers that are needed for functions and such
+anyways, these imports show the android. whatever that are needed for functions and such
  */
 import android.app.Activity;
 import android.content.Context;
@@ -16,15 +16,12 @@ import android.os.Bundle;
 import android.util.FloatMath;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.media.MediaPlayer;
 
 
 public class CrystalBall extends Activity {
 
     private TextView answerText;
-
-    /*
-    look at all these variables
-     */
 
     private SensorManager sensorManager;
     private Sensor accelerometer;
@@ -54,6 +51,8 @@ public class CrystalBall extends Activity {
                  */
                 Toast toast = Toast.makeText(getApplication(), "Device has shaken", Toast.LENGTH_SHORT);
                 toast.show();
+                MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.crystal_ball);
+                mediaPlayer.start();
             }
         }
 
@@ -79,9 +78,10 @@ whoo hoo setting up gravity situations and such so we can know if the device has
         acceleration = 0.0f;
         currentAcceleration = SensorManager.GRAVITY_EARTH;
         previousAcceleration = SensorManager.GRAVITY_EARTH;
-/*
-yaay getting the predictions
- */
+
+                /*
+                    yaay getting the predictions
+                 */
         answerText = (TextView) findViewById(R.id.answerText);
         answerText.setText(Predictions.get().getPrediction());
     }
@@ -105,7 +105,5 @@ yaay getting the predictions
     }
 }
 /*
-okay i hope this is what you meant by commenting because this is how i have always commented
-i don't know, i don usually leave a commentary on my code, i just understand it and try to make it easy to read
-in my opinion, commenting is good for debugging, but my final product never has comments and is designed to be easy to read
+okay i hope this is what you meant by commenting because this is how i have als
  */
