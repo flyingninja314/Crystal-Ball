@@ -18,7 +18,7 @@
         android:textScaleX="1.5"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:textColor="#00FF00"
+        android:textColor="#E6E6E6"
         />
 
 </RelativeLayout>
